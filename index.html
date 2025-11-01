@@ -1,14 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main class="main-container">
 
-    </main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+
+<body>
+
+  <!-- ===============================
+       MAIN WRAPPER
+       =============================== -->
+  <main class="weatherApp">
+
+    <!-- ===============================
+         SEARCH BAR
+         =============================== -->
+    <header class="searchBar">
+      <input type="text" placeholder="Search City" class="searchBar__input">
+      <button class="searchBar__btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </header>
+    <!-- /SEARCH BAR -->
+
+    <!-- ===============================
+         WEATHER INFORMATION
+         =============================== -->
+    <section class="weatherInfo">
+
+      <!-- LOCATION & DATE -->
+      <div class="locationDate">
+        <div class="location">
+          <span class="material-symbols-outlined">location_on</span>
+          <p class="text--bold">Singapore</p>
+        </div>
+        <div class="date text--regular">
+          <p>Thu, 21 June</p>
+        </div>
+      </div>
+      <!-- /LOCATION & DATE -->
+
+      <!-- CURRENT WEATHER SUMMARY -->
+      <div class="weatherSummary">
+        <img src="assets/weather/clouds.svg" alt="clouds" class="weatherSummary__icon">
+        <div class="weatherSummary__text">
+          <p class="weatherSummary__temp text--bold">30 &deg;C</p>
+          <p class="weatherSummary__type text--regular">Clouds</p>
+        </div>
+      </div>
+      <!-- /CURRENT WEATHER SUMMARY -->
+
+      <!-- WEATHER CONDITIONS (Humidity / Wind) -->
+      <div class="weatherConditions">
+        <div class="weatherConditions__info">
+
+          <!-- HUMIDITY -->
+          <div class="weatherConditions__humidity">
+            <span class="material-symbols-outlined">water_drop</span>
+            <div class="weatherConditions__text">
+              <p class="text--regular">Humidity</p>
+              <p class="text--bold">74%</p>
+            </div>
+          </div>
+
+          <!-- WIND -->
+          <div class="weatherConditions__wind">
+            <span class="material-symbols-outlined">air</span>
+            <div class="weatherConditions__text">
+              <p class="text--regular">Wind Speed</p>
+              <p class="text--bold">4.12 M/s</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /WEATHER CONDITIONS -->
+
+      <!-- FORECAST CARDS -->
+      <div class="forecastList">
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+        <div class="forecastCard">
+          <p class="forecastCard__date text--regular">Aug 09</p>
+          <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
+          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+        </div>
+      </div>
+      <!-- /FORECAST CARDS -->
+
+    </section>
+    <!-- /WEATHER INFORMATION -->
+
+  </main>
+  <!-- /MAIN WRAPPER -->
+
 </body>
 </html>

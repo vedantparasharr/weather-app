@@ -1,32 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ============================================
+   IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
 * {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
 }
 
 body {
-    background: url('assets/bg.jpg');
-    background-size: cover;
-    height: 100dvh;
-    width: 100%;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: url('assets/bg.jpg') center/cover no-repeat;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 body::before {
-    content: '';
-    height: 100dvh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(15px);
-    
+  content: '';
+  position: absolute;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
 }
 
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+.text--regular {
+  font-weight: 400;
+}
 
+.text--bold {
+  font-weight: 500;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+.weatherApp {
+  height: 496px;
+  width: 300px;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.15));
+  backdrop-filter: blur(100px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   SEARCH BAR
+   ============================================ */
+.searchBar {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.searchBar__input {
+  width: 100%;
+  padding: 10px 16px;
+  padding-right: 45px;
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background: rgba(0, 0, 0, 0.15);
+  outline: none;
+  font-weight: 500;
+  transition: border 0.25s ease;
+}
+
+.searchBar__input:focus {
+  border: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.searchBar__input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.searchBar__btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+/* ============================================
+   WEATHER INFO CONTAINER
+   ============================================ */
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* LOCATION & DATE */
+.locationDate,
+.weatherConditions__info,
+.weatherSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================
+   WEATHER SUMMARY
+   ============================================ */
+.weatherSummary__icon {
+  width: 120px;
+  height: 120px;
+}
+
+.weatherSummary__temp {
+  font-size: 28px;
+}
+
+.weatherSummary__type {
+  text-align: end;
+  font-size: 20px;
+}
+
+/* ============================================
+   WEATHER CONDITIONS
+   ============================================ */
+.weatherConditions__humidity,
+.weatherConditions__wind {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weatherConditions__humidity span,
+.weatherConditions__wind span {
+  font-size: 30px;
+}
+
+.weatherConditions__text,
+.forecastCard__date,
+.forecastCard__temp {
+  font-size: 13.28px;
+}
+
+/* ============================================
+   FORECAST SECTION
+   ============================================ */
+.forecastList {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+}
+
+.forecastList::-webkit-scrollbar {
+  height: 6px;
+}
+
+.forecastList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+
+.forecastList::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+
+.forecastCard {
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease-out;
+}
+
+.forecastCard:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.forecastCard__icon {
+  height: 35px;
+  width: 35px;
+}
