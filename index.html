@@ -6,122 +6,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- GOOGLE FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
 <body>
-
-  <!-- ===============================
-       MAIN WRAPPER
-       =============================== -->
   <main class="weatherApp">
 
-    <!-- ===============================
-         SEARCH BAR
-         =============================== -->
+    <!-- SEARCH BAR -->
     <header class="searchBar">
       <input type="text" placeholder="Search City" class="searchBar__input">
       <button class="searchBar__btn">
         <span class="material-symbols-outlined">search</span>
       </button>
     </header>
-    <!-- /SEARCH BAR -->
 
-    <!-- ===============================
-         WEATHER INFORMATION
-         =============================== -->
-    <section class="weatherInfo">
+    <!-- WEATHER INFO -->
+    <section class="weatherInfo" style="display: none;">
 
       <!-- LOCATION & DATE -->
       <div class="locationDate">
         <div class="location">
           <span class="material-symbols-outlined">location_on</span>
-          <p class="text--bold">Singapore</p>
+          <h3 class="text--bold">Singapore</h2>
         </div>
-        <div class="date text--regular">
-          <p>Thu, 21 June</p>
+        <div class="date">
+          <h3 class="text--regular">Thu, 21 June</h3>
         </div>
       </div>
-      <!-- /LOCATION & DATE -->
 
-      <!-- CURRENT WEATHER SUMMARY -->
+      <!-- CURRENT WEATHER -->
       <div class="weatherSummary">
         <img src="assets/weather/clouds.svg" alt="clouds" class="weatherSummary__icon">
         <div class="weatherSummary__text">
-          <p class="weatherSummary__temp text--bold">30 &deg;C</p>
-          <p class="weatherSummary__type text--regular">Clouds</p>
+          <h1 class="weatherSummary__temp text--bold">30 &deg;C</h1>
+          <h2 class="weatherSummary__type text--regular">Clouds</h2>
         </div>
       </div>
-      <!-- /CURRENT WEATHER SUMMARY -->
 
-      <!-- WEATHER CONDITIONS (Humidity / Wind) -->
+      <!-- CONDITIONS -->
       <div class="weatherConditions">
         <div class="weatherConditions__info">
 
-          <!-- HUMIDITY -->
           <div class="weatherConditions__humidity">
             <span class="material-symbols-outlined">water_drop</span>
             <div class="weatherConditions__text">
-              <p class="text--regular">Humidity</p>
-              <p class="text--bold">74%</p>
+              <h3 class="text--regular">Humidity</h3>
+              <h3 class="text--bold">74%</h3>
             </div>
           </div>
 
-          <!-- WIND -->
           <div class="weatherConditions__wind">
             <span class="material-symbols-outlined">air</span>
             <div class="weatherConditions__text">
-              <p class="text--regular">Wind Speed</p>
-              <p class="text--bold">4.12 M/s</p>
+              <h3 class="text--regular">Wind Speed</h3>
+              <h3 class="text--bold">4.12 M/s</h3>
             </div>
           </div>
 
         </div>
       </div>
-      <!-- /WEATHER CONDITIONS -->
 
-      <!-- FORECAST CARDS -->
+      <!-- FORECAST -->
       <div class="forecastList">
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
         <div class="forecastCard">
-          <p class="forecastCard__date text--regular">Aug 09</p>
+          <h4 class="forecastCard__date text--regular">Aug 09</h4>
           <img src="/assets/weather/clouds.svg" alt="clouds" class="forecastCard__icon">
-          <p class="forecastCard__temp text--bold">28 &deg;C</p>
+          <h4 class="forecastCard__temp text--bold">28 &deg;C</h4>
         </div>
       </div>
-      <!-- /FORECAST CARDS -->
-
     </section>
-    <!-- /WEATHER INFORMATION -->
+
+    <!-- SEARCH CITY -->
+    <section class="searchCity section-message">
+      <img src="assets/message/search-city.png" alt="search city">
+      <div>
+        <h2 class="text--bold">Search City</h2>
+        <h4 class="text--regular">Find out the weather conditions of the city</h3>
+      </div>
+      <button class="searchCity__locationBtn">
+        <span class="material-symbols-outlined">my_location</span>
+        <h4 class="text--bold">Use My Location</h3>
+      </button>
+    </section>
+    <!-- /SEARCH CITY -->
+
+    <section class="notFound section-message" style="display: none;">
+      <img src="assets/message/not-found.png" alt="search city">
+      <div>
+        <h2 class="text--bold">Search City</h2>
+        <h4 class="text--regular">Find out the weather conditions of the city</h3>
+      </div>
+    </section>
 
   </main>
-  <!-- /MAIN WRAPPER -->
-
 </body>
 </html>

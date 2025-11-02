@@ -35,8 +35,9 @@ body::before {
 }
 
 /* ============================================
-   TEXT UTILITIES
+   TEXT UTILITIES (Professional Typography)
    ============================================ */
+
 .text--regular {
   font-weight: 400;
 }
@@ -49,6 +50,8 @@ body::before {
    MAIN CONTAINER
    ============================================ */
 .weatherApp {
+  display: flex;
+  flex-direction: column;
   height: 496px;
   width: 300px;
   z-index: 1;
@@ -100,12 +103,26 @@ body::before {
   display: flex;
 }
 
+.searchBar__btn .material-symbols-outlined {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.searchBar__btn:hover .material-symbols-outlined {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.searchBar__btn:active .material-symbols-outlined {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
 /* ============================================
    WEATHER INFO CONTAINER
    ============================================ */
 .weatherInfo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -196,7 +213,7 @@ body::before {
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease-out;
+  transition: background 0.3s ease;
 }
 
 .forecastCard:hover {
@@ -207,3 +224,51 @@ body::before {
   height: 35px;
   width: 35px;
 }
+
+
+/* ============================================
+   SEARCH CITY & NOT FOUND ERROR SECTION
+   ============================================ */
+.section-message {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.section-message img {
+  height: 180px;
+  width: fit-content;
+}
+
+.searchCity__locationBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid transparent;
+  border-radius: 99px;
+  padding: 4px 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.searchCity__locationBtn p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.searchCity__locationBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.searchCity__locationBtn:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
