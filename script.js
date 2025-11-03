@@ -29,6 +29,7 @@ const skyTextElem = document.querySelector(".js-sky-text");
 const humidityElem = document.querySelector(".js-humidity");
 const windSpeedElem = document.querySelector(".js-wind-speed");
 const forecastContainer = document.querySelector('.js-forecast-list');
+const sectionLoading = document.querySelector(".js-loading");
 
 
 // ===== EVENT HANDLERS =====
@@ -122,8 +123,17 @@ function getWeatherIcon(Id) {
 async function updateWeatherInfo(city) {
 
   try {
+    // SHOW LOADER
+    sectionSearchCity.style.display = "none";
+    sectionWeatherInfo.style.display = "none";
+    sectionNotFound.style.display = "none";
+    sectionLoading.style.display = "flex";
+
+
     const weatherData = await fetchWeatherData(city);
     const forecastData = await fetchForecastData(city);
+
+    sectionLoading.style.display = "none";
 
     // City not found
     if (weatherData.message === "city not found") {
@@ -168,6 +178,7 @@ async function updateWeatherInfo(city) {
     console.error("Error fetching or displaying weather data:", error);
     sectionSearchCity.style.display = "none";
     sectionWeatherInfo.style.display = "none";
+    sectionLoading.style.display = "none";
     sectionNotFound.style.display = "flex";
   }
 }
