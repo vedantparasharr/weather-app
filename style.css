@@ -51,8 +51,8 @@ body::before {
    ============================================ */
 .weatherApp {
   display: flex;
-  flex-direction: column;
-  height: 496px;
+  flex-direction: column; 
+  min-height: 496px;
   width: 300px;
   padding: 20px;
   border-radius: 12px;
@@ -121,6 +121,7 @@ body::before {
 /* ============================================
    WEATHER INFO
    ============================================ */
+
 .weatherInfo {
   display: flex;
   flex-direction: column;
@@ -140,7 +141,31 @@ body::before {
 .location {
   display: flex;
   align-items: center;
+  width: 50%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
   gap: 6px;
+}
+
+.location::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ============================================
+   WEATHER SUMMARY
+   ============================================ */
+
+   .section-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Center vertically */
+  align-items: center;       /* Center horizontally */
+  text-align: center;
+  flex-grow: 1;              /* Take remaining space below search bar */
+  width: 100%;
 }
 
 
