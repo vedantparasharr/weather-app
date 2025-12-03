@@ -1,6 +1,6 @@
 # ☁️ QuickWeather
 
-A clean, modern weather application that helps you check current weather conditions and 5-day forecasts for any city worldwide. Built as a beginner-friendly learning project while mastering JavaScript fundamentals and API integration.
+A clean, modern weather application that helps you check current weather conditions and 5-day forecasts for any city worldwide. Built as a beginner friendly learning project while mastering JavaScript fundamentals and API integration.
 
 ![Weather App Preview](./assets/screenshots/preview.png)
 
